@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1026">
+    <title>Emberlight</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        background: #0b1026;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        background: #0b1026;
+      }
+
+      body {
+        display: grid;
+        place-items: center;
+      }
+
+      canvas {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+        background: #0b1026;
+      }
+
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas
+      id="game"
+      aria-label="Emberlight: keep your lantern flame alive — collect light motes, dodge the shadow wisps, dash to escape"
+    ></canvas>
+    <p id="game-status" class="visually-hidden" aria-live="polite" aria-atomic="true">
+      Emberlight. Keep your lantern flame alive. Collect light motes, dodge shadow wisps, and dash to escape.
+    </p>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
